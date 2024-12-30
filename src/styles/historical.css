@@ -1,0 +1,145 @@
+/* Estilo global del fondo */
+body {
+  background-color: #a0eb2f9c; /* Color de fondo que mencionaste */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Ajustes del contenedor principal */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a0eb2f9c; /* Color de fondo similar al de `Sections.astro` */
+  padding: 10px 0;
+}
+
+/* Contenedor para los logos y la hora */
+.logo-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ajusta el ancho del contenedor */
+  max-width: 1200px; /* Limitar el ancho máximo */
+}
+
+/* Contenedor de los logos y hora-fecha */
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Toma todo el ancho disponible */
+  align-items: center;
+}
+
+.logo-left {
+  margin-right: 20px; /* Espacio entre el logo de BCS y la hora */
+}
+
+#time {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: black; /* Asegurarse que el color sea visible */
+}
+
+.time-center {
+  flex-grow: 1; /* Asegura que la hora esté centrada */
+  text-align: center;
+}
+
+.logo-right {
+  margin-left: auto;
+  margin-right: 20px; /* Espacio entre la hora y el logo de API BCS */
+}
+
+/* Carrusel */
+.gallery {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column; /* Carrusel en forma de columna */
+  overflow: hidden;
+  width: 80%; /* Ajustamos el carrusel a un 80% del ancho de la pantalla */
+  height: 80vh; /* Ajustamos el carrusel a un 80% de la altura de la pantalla */
+  position: relative;
+}
+
+.carousel-item {
+  display: none; /* Ocultar todas las imágenes por defecto */
+  width: 100%;
+  height: 100%; /* Se asegura que cada imagen ocupe toda la altura disponible */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ajusta las imágenes para que se vean completas sin deformarse */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+/* Estilos del modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.description {
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  margin-top: 10px;
+}
+
+.close {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

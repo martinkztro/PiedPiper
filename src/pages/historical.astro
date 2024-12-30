@@ -1,0 +1,103 @@
+---
+import '../styles/historical.css'; /* Importar el archivo CSS */
+import Time from "../assets/Time.astro"; /* Asegúrate de que el componente Time esté bien importado */
+---
+
+<div class="header">
+  <div class="logo-time">
+    <!-- Contenedor para los logos y la hora -->
+    <nav class="flex justify-between items-center w-full">
+      <!-- Logo de BCS a la izquierda -->
+      <figure class="logo-left">
+        <img class="w-[370px]" src="/img/bcs_logo.png" alt="Logo BCS">
+      </figure>
+      <!-- Hora y fecha en el centro -->
+      <div class="time-center">
+        <Time />
+      </div>
+      <!-- Logo de API BCS a la derecha -->
+      <figure class="logo-right">
+        <img class="w-[400px]" src="/img/api_logo.png" alt="Logo API BCS">
+      </figure>
+    </nav>
+  </div>
+</div>
+
+<!-- Galería de estatuas e historia -->
+<div class="gallery">
+  <div class="carousel">
+    <div class="carousel-item" onclick="openImageModal('/images/ballena-jorobada.webp', 'Estatua de la ballena jorobada')">
+      <img src="/statues/ballena-jorobada.webp" alt="Estatua de la ballena jorobada">
+    </div>
+    <div class="carousel-item" onclick="openImageModal('/images/el-ancla.webp', 'Estatua del ancla')">
+      <img src="/statues/el-ancla.webp" alt="Estatua del ancla">
+    </div>
+    <div class="carousel-item" onclick="openImageModal('/images/el-viejo-y-el-mar.webp', 'Estatua del viejo y el mar')">
+      <img src="/statues/el-viejo-y-el-mar.webp" alt="Estatua del viejo y el mar">
+    </div>
+    <div class="carousel-item" onclick="openImageModal('/images/la-paloma.webp', 'Estatua de la paloma')">
+      <img src="/statues/la-paloma.webp" alt="Estatua de la paloma">
+    </div>
+    <div class="carousel-item" onclick="openImageModal('/images/la-perla.webp', 'Estatua de la perla')">
+      <img src="/statues/la-perla.webp" alt="Estatua de la perla">
+    </div>
+    <div class="carousel-item" onclick="openImageModal('/images/paraiso-del-mar.webp', 'Estatua del paraíso del mar')">
+      <img src="/statues/paraiso-del-mar.webp" alt="Estatua del paraíso del mar">
+    </div>
+  </div>
+
+  <!-- Botones para navegar manualmente -->
+  <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+  <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</div>
+
+<!-- Modal para mostrar imagen ampliada con descripción -->
+<div id="imageModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img id="modalImage" class="modal-content" alt="Estatua ampliada">
+  <div id="imageDescription" class="description"></div>
+</div>
+
+<script type="module">
+  let slideIndex = 0;
+  let slides = document.getElementsByClassName("carousel-item");
+
+  // Mostrar la siguiente imagen automáticamente
+  function showSlides() {
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    if (slideIndex < 0) {
+      slideIndex = slides.length - 1;
+    }
+    for (let slide of slides) {
+      slide.style.display = "none";  
+    }
+    slides[slideIndex].style.display = "block";
+    slideIndex++;
+  }
+
+  // Navegación manual
+  function moveSlide(step) {
+    slideIndex += step;
+    showSlides();
+  }
+
+  // Abrir modal
+  function openImageModal(imageSrc, description) {
+    document.getElementById("modalImage").src = imageSrc;
+    document.getElementById("imageDescription").innerText = description;
+    document.getElementById("imageModal").style.display = "block";
+  }
+
+  // Cerrar modal
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+
+  // Iniciar carrusel automático con velocidad más lenta (5 segundos)
+  setInterval(showSlides, 5000); // Cambiar cada 5 segundos
+
+  // Mostrar las primeras imágenes
+  showSlides();
+</script>
