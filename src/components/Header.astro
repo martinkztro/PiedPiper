@@ -1,16 +1,27 @@
 ---
 import Time from "../assets/Time.astro"
+
+
 ---
 
-<header class="py-5
- px-24">
-    <nav class="flex justify-between items-center">
-        <figure>
-            <img class="w-[370px]" src="img/bcs_logo.png" alt="">
-        </figure>
-        <Time/>
-        <figure>
-            <img class="w-[300px]" src="img/api_logo.png" alt="">
-        </figure>
+<header class="header">
+  <div class="logo-time">
+    <!-- Contenedor para los logos y la hora -->
+    <nav class="flex justify-between items-center w-full">
+      <!-- Logo de BCS a la izquierda -->
+      <figure class="logo-left">
+        <img class="w-[390px]" src="/img/bcs_logo.png" alt="Logo BCS">
+      </figure>
+      
+      <!-- Hora y fecha en el centro -->
+      <div class="time-center">
+        <Time />
+      </div>
+
+      <!-- Logo de API BCS a la derecha -->
+      <figure class="logo-right">
+        <img class="w-[350px]" src="/img/api_logo.png" alt="Logo API BCS">
+      </figure>
     </nav>
+  </div>
 </header>

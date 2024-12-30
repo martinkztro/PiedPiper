@@ -1,29 +1,12 @@
 ---
-import '../styles/historical.css'; /* Importar el archivo CSS */
-import Time from "../assets/Time.astro"; /* Asegúrate de que el componente Time esté bien importado */
+import Header from '../components/Header.astro'; 
+import '../styles/historical.css';
+
 ---
 
-<div class="header">
-  <div class="logo-time">
-    <!-- Contenedor para los logos y la hora -->
-    <nav class="flex justify-between items-center w-full">
-      <!-- Logo de BCS a la izquierda -->
-      <figure class="logo-left">
-        <img class="w-[370px]" src="/img/bcs_logo.png" alt="Logo BCS">
-      </figure>
-      <!-- Hora y fecha en el centro -->
-      <div class="time-center">
-        <Time />
-      </div>
-      <!-- Logo de API BCS a la derecha -->
-      <figure class="logo-right">
-        <img class="w-[400px]" src="/img/api_logo.png" alt="Logo API BCS">
-      </figure>
-    </nav>
-  </div>
-</div>
+<Header /> 
 
-<!-- Galería de estatuas e historia -->
+
 <div class="gallery">
   <div class="carousel">
     <div class="carousel-item" onclick="openImageModal('/images/ballena-jorobada.webp', 'Estatua de la ballena jorobada')">
@@ -46,7 +29,7 @@ import Time from "../assets/Time.astro"; /* Asegúrate de que el componente Time
     </div>
   </div>
 
-  <!-- Botones para navegar manualmente -->
+  <!-- Botones manualmente -->
   <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
   <button class="next" onclick="moveSlide(1)">&#10095;</button>
 </div>
@@ -95,8 +78,8 @@ import Time from "../assets/Time.astro"; /* Asegúrate de que el componente Time
     document.getElementById("imageModal").style.display = "none";
   }
 
-  // Iniciar carrusel automático con velocidad más lenta (5 segundos)
-  setInterval(showSlides, 5000); // Cambiar cada 5 segundos
+  // Iniciar carrusel
+  setInterval(showSlides, 5000); 
 
   // Mostrar las primeras imágenes
   showSlides();

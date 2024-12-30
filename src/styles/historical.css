@@ -1,110 +1,64 @@
-/* Estilo global del fondo */
-body {
-  background-color: #a0eb2f9c; /* Color de fondo que mencionaste */
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* Ajustes del contenedor principal */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #a0eb2f9c; /* Color de fondo similar al de `Sections.astro` */
-  padding: 10px 0;
-}
-
-/* Contenedor para los logos y la hora */
-.logo-time {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Ajusta el ancho del contenedor */
-  max-width: 1200px; /* Limitar el ancho máximo */
-}
-
-/* Contenedor de los logos y hora-fecha */
-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%; /* Toma todo el ancho disponible */
-  align-items: center;
-}
-
-.logo-left {
-  margin-right: 20px; /* Espacio entre el logo de BCS y la hora */
-}
-
-#time {
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: black; /* Asegurarse que el color sea visible */
-}
-
-.time-center {
-  flex-grow: 1; /* Asegura que la hora esté centrada */
-  text-align: center;
-}
-
-.logo-right {
-  margin-left: auto;
-  margin-right: 20px; /* Espacio entre la hora y el logo de API BCS */
-}
-
-/* Carrusel */
-.gallery {
-  position: relative;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Estilo general del carrusel */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  background-color: #fff;
 }
 
 .carousel {
-  display: flex;
-  flex-direction: column; /* Carrusel en forma de columna */
-  overflow: hidden;
-  width: 80%; /* Ajustamos el carrusel a un 80% del ancho de la pantalla */
-  height: 80vh; /* Ajustamos el carrusel a un 80% de la altura de la pantalla */
   position: relative;
+  width: 100%;
+  height: 500px; /* Ajusta la altura del carrusel */
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 1s ease-in-out;
 }
 
 .carousel-item {
-  display: none; /* Ocultar todas las imágenes por defecto */
-  width: 100%;
-  height: 100%; /* Se asegura que cada imagen ocupe toda la altura disponible */
+  min-width: 100%; /* Cada imagen ocupa el 100% del contenedor */
+  flex-shrink: 0;
+  text-align: center;
 }
 
 .carousel-item img {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* Ajusta las imágenes para que se vean completas sin deformarse */
+  height: 100%; /* Asegura que las imágenes no se deformen */
+  object-fit: cover; /* Hace que la imagen cubra el área */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Botones prev/next */
 .prev, .next {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-size: 24px;
   border: none;
-  cursor: pointer;
   padding: 10px;
-  z-index: 2;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
 }
 
 .prev {
   left: 10px;
-  transform: translateY(-50%);
 }
 
 .next {
   right: 10px;
-  transform: translateY(-50%);
 }
 
-/* Estilos del modal */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -113,33 +67,22 @@ nav {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
-  margin: auto;
   display: block;
+  margin: 15% auto;
   width: 80%;
-  max-width: 700px;
-}
-
-.description {
-  text-align: center;
-  font-size: 18px;
-  color: white;
-  margin-top: 10px;
+  max-width: 800px;
+  border-radius: 10px;
 }
 
 .close {
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
+  color: #fff;
+  font-size: 30px;
   position: absolute;
   top: 10px;
-  right: 25px;
-  background-color: transparent;
-  border: none;
+  right: 20px;
   cursor: pointer;
 }
