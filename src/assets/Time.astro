@@ -1,3 +1,4 @@
+
 <script>
   function actualizarHora() {
     const ahora = new Date();
@@ -5,10 +6,13 @@
     const minutos = ahora.getMinutes().toString().padStart(2, "0");
     const periodo = ahora.getHours() < 12 ? "A.M." : "P.M.";
 
-    const elementoTiempo = document.querySelector(".text-8xl");
-    if (elementoTiempo) elementoTiempo.textContent = `${horas}:${minutos} ${periodo}`;
+    const elementoTiempo = document.getElementById("hora");
+    if (elementoTiempo) {
+      elementoTiempo.textContent = `${horas}:${minutos} ${periodo}`;
+      elementoTiempo.style.display = "block"; 
+    }
 
-    setTimeout(actualizarHora, 1000);
+    setTimeout(actualizarHora, 1000); 
   }
 
   function actualizarFecha() {
@@ -20,21 +24,21 @@
       day: "numeric",
     };
 
-    // Formatear la fecha y convertirla a mayúsculas
     const fechaFormateada = hoy.toLocaleDateString('es-MX', opcionesFecha).toUpperCase();
 
-    const elementoFecha = document.querySelector(".text-4xl");
-    if (elementoFecha)
+    const elementoFecha = document.getElementById("fecha");
+    if (elementoFecha) {
       elementoFecha.textContent = fechaFormateada;
+      elementoFecha.style.display = "block"; 
+    }
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    actualizarHora();
-    actualizarFecha();
+    actualizarHora(); 
+    actualizarFecha(); 
   });
 </script>
-
 <div class="text-center mt-5">
-<p class="text-8xl font-black">--:-- --</p>
-<p class="text-4xl">-- -- --</p>
+  <p class="text-8xl font-black" id="hora" style="display: none;">--:-- --</p> <!-- Ocultamos inicialmente -->
+  <p class="text-4xl" id="fecha" style="display: none;">-- -- --</p> <!-- Ocultamos inicialmente -->
 </div>

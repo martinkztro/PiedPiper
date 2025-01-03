@@ -2,7 +2,7 @@
 .carousel-container {
   width: 100%;
   height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
-  background-color: #7FFFD4; /* Fondo verde agua */
+  background-color: #1ca5e4; 
   display: flex;
   justify-content: center; /* Centra el carrusel horizontalmente */
   align-items: center; /* Centra el carrusel verticalmente */
@@ -10,7 +10,7 @@
 
 .carousel {
   position: relative;
-  width: 80%; /* El carrusel tendrá un 80% del ancho de la pantalla */
+  width: 100%; /* El carrusel tendrá un 80% del ancho de la pantalla */
   height: auto;
   display: flex;
   justify-content: center; /* Centra las imágenes horizontalmente */
@@ -30,7 +30,7 @@
   height: auto;
   object-fit: contain; /* Asegura que la imagen mantenga su proporción */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(12, 98, 219, 0.3);
   cursor: pointer;
   transition: transform 0.3s ease;
 }
