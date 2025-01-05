@@ -7,30 +7,65 @@ import '../styles/historical.css';
 
 <div class="carousel-container">
   <div class="carousel">
+    <!-- Carrusel con las imágenes -->
     <div class="carousel-item">
-      <img src="/statues/ballena-jorobada.webp" alt="Estatua de la ballena jorobada" onclick="openImageModal('/statues/ballena-jorobada.webp', 'Estatua de la ballena jorobada')">
-      <div class="image-title">La Ballena Jorobada</div>
+      <div class="top-images">
+        <div class="image-item left" onclick="changeImage('ballena-jorobada')">
+          <img src="/statues/ballena-jorobada.webp" alt="Estatua de la ballena jorobada" class="carousel-image" id="ballena-jorobada">
+        </div>
+        <div class="image-item central" onclick="changeImage('ballena-jorobada')">
+          <img src="/statues/ballena-jorobada.webp" alt="Estatua de la ballena jorobada" class="carousel-image" id="ballena-jorobada">
+        </div>
+        <div class="image-item right" onclick="changeImage('ballena-jorobada')">
+          <img src="/statues/ballena-jorobada.webp" alt="Estatua de la ballena jorobada" class="carousel-image" id="ballena-jorobada">
+        </div>
+      </div>
+      <div class="description">
+        <h3>La Ballena Jorobada</h3>
+        <p><strong>Autor:</strong> Octavio Gonzalez Gutierrez</p>
+        <p><strong>Material:</strong> Bronce</p>
+        <p><strong></strong> 2004</p>
+        <p><strong>Descripcion:</strong> Escultura que representa a la ballena jorobada, destacando el trabajo artistico y cientifico del autor.</p>
+        <p><strong>Historia:</strong> La escultura de la ballena jorobada fue parte de una serie para concienciar sobre la conservacion de las especies marinas.</p>
+      </div>
+      <div class="audio-container">
+        <audio id="audioPlayer" controls>
+          <source id="audioSource" src="/audio/La_Ballena_Jorobada.mp3" type="audio/mp3">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
     </div>
+
+    <!-- Segundo slide -->
     <div class="carousel-item">
-      <img src="/statues/el-ancla.webp" alt="Estatua del ancla" onclick="openImageModal('/statues/el-ancla.webp', 'Estatua del ancla')">
-      <div class="image-title">El Ancla</div>
+      <div class="top-images">
+        <div class="image-item left" onclick="changeImage('el-ancla')">
+          <img src="/statues/el-ancla.webp" alt="Estatua del ancla" class="carousel-image" id="el-ancla">
+        </div>
+        <div class="image-item central" onclick="changeImage('el-ancla')">
+          <img src="/statues/el-ancla.webp" alt="Estatua del ancla" class="carousel-image" id="el-ancla">
+        </div>
+        <div class="image-item right" onclick="changeImage('el-ancla')">
+          <img src="/statues/el-ancla.webp" alt="Estatua del ancla" class="carousel-image" id="el-ancla">
+        </div>
+      </div>
+      <div class="description">
+        <h3>El Ancla</h3>
+        <p><strong>Autor:</strong> Octavio González Gutiérrez</p>
+        <p><strong>Material: </strong> Bronce</p>
+        <p> <strong></strong>  2012</p>
+        <p><strong>Descripcion:</strong> Escultura en bronce del ancla española tipo almirantazgo, representando la historia maritima de la region.</p>
+        <p><strong>Historia:</strong> Fue inaugurada en 2012 como parte de un proyecto para preservar la historia naval en la region.</p>
+      </div>
+      <div class="audio-container">
+        <audio id="audioPlayer" controls>
+          <source id="audioSource" src="/audio/El_Ancla.mp3" type="audio/mp3">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="/statues/el-viejo-y-el-mar.webp" alt="Estatua del viejo y el mar" onclick="openImageModal('/statues/el-viejo-y-el-mar.webp', 'Estatua del viejo y el mar')">
-      <div class="image-title">El Viejo y el Mar</div>
-    </div>
-    <div class="carousel-item">
-      <img src="/statues/la-paloma.webp" alt="Estatua de la paloma" onclick="openImageModal('/statues/la-paloma.webp', 'Estatua de la paloma')">
-      <div class="image-title">La Paloma</div>
-    </div>
-    <div class="carousel-item">
-      <img src="/statues/la-perla.webp" alt="Estatua de la perla" onclick="openImageModal('/statues/la-perla.webp', 'Estatua de la perla')">
-      <div class="image-title">La Perla</div>
-    </div>
-    <div class="carousel-item">
-      <img src="/statues/paraiso-del-mar.webp" alt="Estatua del paraíso del mar" onclick="openImageModal('/statues/paraiso-del-mar.webp', 'Estatua del paraíso del mar')">
-      <div class="image-title">Paraíso del Mar</div>
-    </div>
+
+    <!-- Más slides de estatuas aquí -->
   </div>
 
   <!-- Flechas para cambiar de imagen -->
@@ -38,65 +73,44 @@ import '../styles/historical.css';
   <button class="next" onclick="moveSlide(1)">&#10095;</button>
 </div>
 
-<!-- Modal para mostrar la imagen ampliada con su descripción -->
-<div id="imageModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img id="modalImage" class="modal-content" alt="Estatua ampliada">
-  <div id="imageDescription" class="description"></div>
-</div>
-
 <script>
   let slideIndex = 0;
-  let slides = document.getElementsByClassName("carousel-item");
+  const slides = document.getElementsByClassName("carousel-item");
 
-  // Mostrar la siguiente imagen automáticamente
+  // Mostrar la siguiente imagen cuando se navega
   function showSlides() {
-    if (slideIndex >= slides.length) {
-      slideIndex = 0;
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
     }
-    if (slideIndex < 0) {
-      slideIndex = slides.length - 1;
-    }
-    for (let slide of slides) {
-      (slide as HTMLElement).style.display = "none";  
-    }
-    (slides[slideIndex] as HTMLElement).style.display = "block";
-    slideIndex++;
+
+    slides[slideIndex].style.display = "block";
   }
 
-  // Navegación manual
-  function moveSlide(step: number) {
-    slideIndex += step;
+  // Navegación con las flechas (prev y next)
+  function moveSlide(step) {
+    slideIndex += step; 
+    if (slideIndex >= slides.length) slideIndex = 0; 
+    if (slideIndex < 0) slideIndex = slides.length - 1; 
+
     showSlides();
   }
 
-  // Abrir modal
-  function openImageModal(imageSrc: string, description: string) {
-    const modalImage = document.getElementById("modalImage");
-    if (modalImage) {
-      (modalImage as HTMLImageElement).src = imageSrc;
-    }
-    const imageDescription = document.getElementById("imageDescription");
-    if (imageDescription) {
-      imageDescription.innerText = description;
-    }
-    const imageModal = document.getElementById("imageModal");
-    if (imageModal) {
-      imageModal.style.display = "flex";
-    }
-    document.body.style.overflow = 'hidden'; // Deshabilitar scroll cuando el modal esté abierto
+  // Función para poner la imagen en primer plano al hacer clic
+  function changeImage(id) {
+    const images = document.querySelectorAll('.carousel-image');
+    images.forEach(img => {
+      img.style.zIndex = '1';  // Reestablecer el zIndex a 1
+      img.style.transform = 'scale(1)';  // Reestablecer el tamaño a su valor original
+    });
+    const activeImage = document.getElementById(id);
+    activeImage.style.zIndex = '10'; // Poner la imagen seleccionada en primer plano
+    activeImage.style.transform = 'scale(1.2)';  // Aumentar el tamaño de la imagen seleccionada
   }
 
-  // Cerrar modal
-  function closeModal() {
-    const modal = document.getElementById("imageModal");
-    if (modal) {
-      modal.style.display = "none";
-    }
-    document.body.style.overflow = 'auto'; // Habilitar scroll cuando se cierre el modal
-  }
+  // Inicializar el carrusel mostrando la primera imagen al cargar
+  setInterval(() => {
+    moveSlide(1);  // Cambiar automáticamente a la siguiente imagen cada 5 segundos
+  }, 5000);
 
-  // Iniciar carrusel
-  setInterval(showSlides, 5000);
-  showSlides();
+  showSlides();  // Mostrar la primera imagen cuando la página carga
 </script>

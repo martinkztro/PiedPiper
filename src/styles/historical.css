@@ -1,59 +1,104 @@
-/* Estilo general del contenedor de la galería */
 .carousel-container {
+  position: relative;
   width: 100%;
-  height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
-  background-color: #1ca5e4; 
+  height: 600px; /* Ajusta la altura para que se vea mejor */
   display: flex;
-  justify-content: center; /* Centra el carrusel horizontalmente */
-  align-items: center; /* Centra el carrusel verticalmente */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1768af; /* Fondo de color agua */
 }
 
 .carousel {
-  position: relative;
-  width: 100%; /* El carrusel tendrá un 80% del ancho de la pantalla */
-  height: auto;
   display: flex;
-  justify-content: center; /* Centra las imágenes horizontalmente */
-  align-items: center; /* Centra las imágenes verticalmente */
+  justify-content: center;
+  position: relative;
+  width: 80%; /* Ancho ajustado al 80% del contenedor */
+  height: 300px;
+  margin: 0 auto; /* Centra el carrusel dentro del contenedor */
 }
 
 .carousel-item {
-  flex-shrink: 0;
-  text-align: center;
+  display: none; /* Iniciar ocultando todos los slides */
   position: relative;
-  margin: 10px;
+  width: 100%; /* Asegura que cada slide ocupe el 100% del espacio */
 }
 
-.carousel-item img {
+.top-images {
+  display: flex;
+  justify-content: center;
+  position: relative;
   width: 100%;
-  max-width: 600px; /* Ajusta este valor según el tamaño deseado */
-  height: auto;
-  object-fit: contain; /* Asegura que la imagen mantenga su proporción */
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(12, 98, 219, 0.3);
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  height: 200px;
 }
 
-.carousel-item img:hover {
-  transform: scale(1.1); /* Imagen crece un poco al hacer hover */
+.image-item {
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }
 
-/* Título debajo de la imagen */
-.carousel-item .image-title {
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
-  color: white;
+.carousel-image {
+  width: 160px; /* Tamaño de las imágenes */
+  height: 160px; /* Hacemos las imágenes más grandes */
+  object-fit: cover;
+  border-radius: 50%; /* Borde circular */
+  transition: transform 0.3s ease, z-index 0.3s ease; /* Transición para el cambio de tamaño y orden */
+}
+
+.left {
+  left: 5%;
+  transform: translateY(30px); /* Baja un poco la imagen lateral */
+  width: 120px; /* Imagen lateral más pequeña */
+  height: 120px; /* Imagen lateral más pequeña */
+}
+
+.central {
+  left: 50%;
+  transform: translateX(-50%) translateY(-40px); /* Imagen central más elevada */
+  z-index: 2; /* La imagen central está en primer plano */
+  width: 160px; /* Imagen central */
+  height: 160px; /* Imagen central */
+}
+
+.right {
+  right: 5%;
+  transform: translateY(30px); /* Baja un poco la imagen lateral */
+  width: 120px; /* Imagen lateral más pequeña */
+  height: 120px; /* Imagen lateral más pequeña */
+}
+
+.description {
+  position: absolute;
+  bottom: -60px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  z-index: 3;
   padding: 10px;
-  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con transparencia */
   border-radius: 5px;
-  margin-top: 10px;
 }
 
-/* Botones prev/next */
+.audio-container {
+  background-color: #e0f7fa; /* Fondo verde agua para el reproductor */
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+audio {
+  width: 100%;
+}
+
 .prev, .next {
   position: absolute;
-  top: 50%; /* Asegura que las flechas estén centradas verticalmente */
-  transform: translateY(-50%); /* Ajusta la posición para que estén a la altura del centro */
+  top: 50%;
+  transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
@@ -61,16 +106,39 @@
   cursor: pointer;
   font-size: 24px;
   z-index: 10;
+  transition: background-color 0.3s ease;
 }
 
 .prev {
-  left: 5%; /* Ajusta la posición horizontal para que las flechas estén más centradas */
+  left: 5px;
 }
 
 .next {
-  right: 5%; /* Ajusta la posición horizontal para que las flechas estén más centradas */
+  right: 5px;
 }
 
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 500px; /* Ajusta la altura en pantallas más pequeñas */
+  }
+
+  .carousel-image {
+    width: 80px; /* Tamaño más pequeño de las imágenes */
+    height: 80px; /* Tamaño más pequeño de las imágenes */
+  }
+
+  .description {
+    font-size: 16px; /* Tamaño de fuente más pequeño para pantallas más pequeñas */
+  }
+
+  .prev, .next {
+    font-size: 20px; /* Ajusta el tamaño de las flechas */
+  }
+}
+.header{
+  background-color: aqua;
 }
