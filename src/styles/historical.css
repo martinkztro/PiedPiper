@@ -35,13 +35,13 @@
   width: 550px;  /* Imagen reducida un 20% */
   height: 380px;  /* Imagen reducida un 20% */
   object-fit: cover;
-  border-radius:35px;
+  border-radius:30px;
   transition: transform 0.3s ease;
   z-index: 1;
 }
 
 .central {
-  transform: scale(1.3);  /* Imagen ampliada al seleccionar */
+  transform: scale(1.2);  /* Imagen ampliada al seleccionar */
   z-index: 2;
 }
 
@@ -125,7 +125,7 @@ audio {
   transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .carousel-container {
     height: 400px;
   }
@@ -146,4 +146,10 @@ audio {
 
 .info-item {
   text-align: justify;
+  font-family:'Roboto', sans-serif;
+}
+body global{
+background-color:aqua;
+
+
 }
