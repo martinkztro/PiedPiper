@@ -9,63 +9,53 @@ import '../styles/historical.css';
   <div class="carousel">
     <!-- Carrusel con las imágenes -->
     <div class="carousel-item">
-      <div class="top-images">
-        <div class="image-item left" onclick="changeImage('ballena-jorobada')">
-          <img src="/statues/ballena-jorobada.webp" alt="Estatua de la ballena jorobada" class="carousel-image" id="ballena-jorobada">
+      <div class="image-item central" onclick="changeImage('ballena-jorobada')">
+        <img src="/statues/ballena-jorobada.webp" alt="Estatua de la ballena jorobada" class="carousel-image" id="ballena-jorobada">
+
+        <!-- Información en columnas -->
+        <div class="description">
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Autor:</strong> Octavio Gonzalez Gutierrez
+            </div>
+            <div class="info-item">
+              <strong>Material:</strong> Bronce
+            </div>
+            <div class="info-item">
+              <strong>Ano:</strong> 2004
+            </div>
+          </div>
+
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Descripcion:</strong> Escultura de bronce que alcanza una altura maxima de 2.60 metros, con una posicion de salto con las aletas extendidas, sostenida en un tubo metalico que se soporta en una base circular de concreto de 40 cm de alto...
+            </div>
+          </div>
+
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Historia:</strong> La ballena jorobada o yubarta es una especie de cetacio que se reproduce cada temporada en las costas de Baja California Sur, convirtiendose en un espectaculo turístico de especial atencion.
+            </div>
+          </div>
+
+          <!-- Icono de audio -->
+          <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
+            <img src="/statues/bocina.png" alt="Reproducir Audio" class="audio-icon-img" />
+          </button>
+
+          <!-- Contenedor de audio -->
+          <div class="audio-container" id="audioContainer1" style="display: none;">
+            <audio id="audioPlayer1" controls>
+              <source id="audioSource" src="/audio/La_Ballena_Jorobada.mp3" type="audio/mp3">
+              <source id="audioSourceOgg" src="/audio/La_Ballena_Jorobada.ogg" type="audio/ogg">
+              Tu navegador no soporta el elemento de audio.
+            </audio>
+          </div>
         </div>
-        <div class="image-item central" onclick="changeImage('ballena-jorobada')">
-          <img src="/statues/ballena-jorobada.webp" alt="Estatua de la ballena jorobada" class="carousel-image" id="ballena-jorobada">
-        </div>
-        <div class="image-item right" onclick="changeImage('ballena-jorobada')">
-          <img src="/statues/ballena-jorobada.webp" alt="Estatua de la ballena jorobada" class="carousel-image" id="ballena-jorobada">
-        </div>
-      </div>
-      <div class="description">
-        <h3>La Ballena Jorobada</h3>
-        <p><strong>Autor:</strong> Octavio Gonzalez Gutierrez</p>
-        <p><strong>Material:</strong> Bronce</p>
-        <p><strong></strong> 2004</p>
-        <p><strong>Descripcion:</strong> Escultura que representa a la ballena jorobada, destacando el trabajo artistico y cientifico del autor.</p>
-        <p><strong>Historia:</strong> La escultura de la ballena jorobada fue parte de una serie para concienciar sobre la conservacion de las especies marinas.</p>
-      </div>
-      <div class="audio-container">
-        <audio id="audioPlayer" controls>
-          <source id="audioSource" src="/audio/La_Ballena_Jorobada.mp3" type="audio/mp3">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
       </div>
     </div>
 
-    <!-- Segundo slide -->
-    <div class="carousel-item">
-      <div class="top-images">
-        <div class="image-item left" onclick="changeImage('el-ancla')">
-          <img src="/statues/el-ancla.webp" alt="Estatua del ancla" class="carousel-image" id="el-ancla">
-        </div>
-        <div class="image-item central" onclick="changeImage('el-ancla')">
-          <img src="/statues/el-ancla.webp" alt="Estatua del ancla" class="carousel-image" id="el-ancla">
-        </div>
-        <div class="image-item right" onclick="changeImage('el-ancla')">
-          <img src="/statues/el-ancla.webp" alt="Estatua del ancla" class="carousel-image" id="el-ancla">
-        </div>
-      </div>
-      <div class="description">
-        <h3>El Ancla</h3>
-        <p><strong>Autor:</strong> Octavio González Gutiérrez</p>
-        <p><strong>Material: </strong> Bronce</p>
-        <p> <strong></strong>  2012</p>
-        <p><strong>Descripcion:</strong> Escultura en bronce del ancla española tipo almirantazgo, representando la historia maritima de la region.</p>
-        <p><strong>Historia:</strong> Fue inaugurada en 2012 como parte de un proyecto para preservar la historia naval en la region.</p>
-      </div>
-      <div class="audio-container">
-        <audio id="audioPlayer" controls>
-          <source id="audioSource" src="/audio/El_Ancla.mp3" type="audio/mp3">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
-      </div>
-    </div>
-
-    <!-- Más slides de estatuas aquí -->
+    <!-- Más slides aquí -->
   </div>
 
   <!-- Flechas para cambiar de imagen -->
@@ -77,17 +67,15 @@ import '../styles/historical.css';
   let slideIndex = 0;
   const slides = document.getElementsByClassName("carousel-item");
 
-  // Mostrar la siguiente imagen cuando se navega
   function showSlides() {
     for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+      (slides[i] as HTMLElement).style.opacity = "0";  // Ocultamos todos los slides
     }
 
-    slides[slideIndex].style.display = "block";
+    (slides[slideIndex] as HTMLElement).style.opacity = "1";  // Mostramos el slide actual
   }
 
-  // Navegación con las flechas (prev y next)
-  function moveSlide(step) {
+  function moveSlide(step: number) {
     slideIndex += step; 
     if (slideIndex >= slides.length) slideIndex = 0; 
     if (slideIndex < 0) slideIndex = slides.length - 1; 
@@ -95,22 +83,32 @@ import '../styles/historical.css';
     showSlides();
   }
 
-  // Función para poner la imagen en primer plano al hacer clic
-  function changeImage(id) {
+  function changeImage(id: string) {
     const images = document.querySelectorAll('.carousel-image');
     images.forEach(img => {
-      img.style.zIndex = '1';  // Reestablecer el zIndex a 1
-      img.style.transform = 'scale(1)';  // Reestablecer el tamaño a su valor original
+      (img as HTMLElement).style.transform = 'scale(1)';  // Reestablecer el tamaño
     });
     const activeImage = document.getElementById(id);
-    activeImage.style.zIndex = '10'; // Poner la imagen seleccionada en primer plano
-    activeImage.style.transform = 'scale(1.2)';  // Aumentar el tamaño de la imagen seleccionada
+    if (activeImage) {
+      activeImage.style.transform = 'scale(1.3)';  // Aumentar el tamaño de la imagen seleccionada
+    }
   }
 
-  // Inicializar el carrusel mostrando la primera imagen al cargar
   setInterval(() => {
     moveSlide(1);  // Cambiar automáticamente a la siguiente imagen cada 5 segundos
-  }, 5000);
+  }, 2000);
 
   showSlides();  // Mostrar la primera imagen cuando la página carga
+
+  // Función para mostrar u ocultar el reproductor de audio
+  function toggleAudio(containerId: string) {
+    const audioContainer = document.getElementById(containerId);
+    if (audioContainer) {
+      if (audioContainer.style.display === "none") {
+        audioContainer.style.display = "block";
+      } else {
+        audioContainer.style.display = "none";
+      }
+    }
+  }
 </script>
