@@ -1,17 +1,21 @@
 ---
-import Header from '../components/Header.astro'; 
-import '../styles/historical.css';
+import Header from "../components/Header.astro";
+import "../styles/historical.css";
 ---
 
-<Header /> 
+<Header />
 
 <div class="carousel-container">
   <div class="carousel">
     <!-- Carrusel con las imágenes -->
     <div class="carousel-item">
-
       <div class="image-item central" onclick="changeImage('ballena-jorobada')">
-        <img src="/statues/ballena-jorobada.webp" alt="Estatua de la ballena jorobada" class="carousel-image" id="ballena-jorobada">
+        <img
+          src="/statues/ballena-jorobada.webp"
+          alt="Estatua de la ballena jorobada"
+          class="carousel-image"
+          id="ballena-jorobada"
+        />
 
         <!-- Información en columnas -->
         <div class="description">
@@ -29,26 +33,47 @@ import '../styles/historical.css';
 
           <div class="info-column">
             <div class="info-item">
-              <strong>Descripcion:</strong> Escultura de bronce que alcanza una altura maxima de 2.60 metros, con una posicion de salto con las aletas extendidas, sostenida en un tubo metalico que se soporta en una base circular de concreto de 40 cm de alto...
+              <strong>Descripcion:</strong> Escultura de bronce que alcanza una altura
+              maxima de 2.60 metros, con una posicion de salto con las aletas extendidas,
+              sostenida en un tubo metalico que se soporta en una base circular de
+              concreto de 40 cm de alto...
             </div>
           </div>
 
           <div class="info-column">
             <div class="info-item">
-              <strong>Historia:</strong> La ballena jorobada o yubarta es una especie de cetacio que se reproduce cada temporada en las costas de Baja California Sur, convirtiendose en un espectaculo turístico de especial atencion.
+              <strong>Historia:</strong> La ballena jorobada o yubarta es una especie
+              de cetacio que se reproduce cada temporada en las costas de Baja California
+              Sur, convirtiendose en un espectaculo turístico de especial atencion.
             </div>
           </div>
 
           <!-- Icono de audio -->
           <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
-            <img src="/statues/bocina.png" alt="Reproducir Audio" class="audio-icon-img" />
+            <img
+              src="/statues/bocina.png"
+              alt="Reproducir Audio"
+              class="audio-icon-img"
+            />
           </button>
 
           <!-- Contenedor de audio -->
-          <div class="audio-container" id="audioContainer1" style="display: none;">
+          <div
+            class="audio-container"
+            id="audioContainer1"
+            style="display: none;"
+          >
             <audio id="audioPlayer1" controls>
-              <source id="audioSource" src="/audio/La_Ballena_Jorobada.mp3" type="audio/mp3">
-              <source id="audioSourceOgg" src="/audio/La_Ballena_Jorobada.ogg" type="audio/ogg">
+              <source
+                id="audioSource"
+                src="/audio/La_Ballena_Jorobada.mp3"
+                type="audio/mp3"
+              />
+              <source
+                id="audioSourceOgg"
+                src="/audio/La_Ballena_Jorobada.ogg"
+                type="audio/ogg"
+              />
               Tu navegador no soporta el elemento de audio.
             </audio>
           </div>
@@ -59,8 +84,13 @@ import '../styles/historical.css';
     <!-- Imagen 2 (actual) -->
     <div class="carousel-item">
       <div class="image-item central" onclick="changeImage('La Perla')">
-        <img src="/statues/la perla.webp" alt="Estatua de la Perla" class="carousel-image" id="la perla">
-        
+        <img
+          src="/statues/la perla.webp"
+          alt="Estatua de la Perla"
+          class="carousel-image"
+          id="la perla"
+        />
+
         <!-- Información en columnas -->
         <div class="description">
           <div class="info-column">
@@ -77,29 +107,62 @@ import '../styles/historical.css';
 
           <div class="info-column">
             <div class="info-item">
-              <strong>Descripción:</strong> 
-              Monumental escultura de bronce con una altura de 5.20 metros y 4 metros de ancho, que representa una concha marina, en cuyo centro destaca una brillante perla elaborada en aluminio, que alcanza un diámetro de 1.40 metros. Se encuentra sobre una plataforma circular de dos niveles y una roca marina también elaborada en bronce.
+              <strong>Descripción:</strong>
+              Monumental escultura de bronce con una altura de 5.20 metros y 4 metros
+              de ancho, que representa una concha marina, en cuyo centro destaca
+              una brillante perla elaborada en aluminio, que alcanza un diámetro
+              de 1.40 metros. Se encuentra sobre una plataforma circular de dos niveles
+              y una roca marina también elaborada en bronce.
             </div>
           </div>
 
           <div class="info-column">
             <div class="info-item">
-              <strong>Historia:</strong> 
-              Las perlas son objetos marinos que desde tiempos ancestrales han sido utilizados como prendas decorativas de especial valor en diferentes pueblos, particularmente en la elaboración de adornos femeninos y en coronas de numerosas reinas, sobre todo de las casas reales europeas. En Baja California Sur han estado presentes como producto de la actividad económica pesquera, cuyo esplendor se alcanzó a finales del siglo XIX y principios del siglo XX, principalmente en el puerto de La Paz, donde destacó la empresa propiedad del señor Gastón Vives.
-              Aún no se ha comprobado un relato acerca de la perla de singular belleza y tamaño que se cree fue extraída en los mares sudcalifornianos, y que forma parte de la corona de la reina Isabel II de Inglaterra; sin embargo, este objeto es motivo central de la novela La perla, del escritor estadounidense y ganador del Premio Nobel de Literatura, John Steinbeck, quien se indica, escribió el texto basado en una historia que conoció durante su estancia en la ciudad de La Paz 
+              <strong>Historia:</strong>
+              Las perlas son objetos marinos que desde tiempos ancestrales han sido
+              utilizados como prendas decorativas de especial valor en diferentes
+              pueblos, particularmente en la elaboración de adornos femeninos y en
+              coronas de numerosas reinas, sobre todo de las casas reales europeas.
+              En Baja California Sur han estado presentes como producto de la actividad
+              económica pesquera, cuyo esplendor se alcanzó a finales del siglo XIX
+              y principios del siglo XX, principalmente en el puerto de La Paz, donde
+              destacó la empresa propiedad del señor Gastón Vives. Aún no se ha comprobado
+              un relato acerca de la perla de singular belleza y tamaño que se cree
+              fue extraída en los mares sudcalifornianos, y que forma parte de la
+              corona de la reina Isabel II de Inglaterra; sin embargo, este objeto
+              es motivo central de la novela La perla, del escritor estadounidense
+              y ganador del Premio Nobel de Literatura, John Steinbeck, quien se
+              indica, escribió el texto basado en una historia que conoció durante
+              su estancia en la ciudad de La Paz
             </div>
           </div>
 
           <!-- Icono de audio -->
           <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
-            <img src="/statues/bocina.png" alt="Reproducir Audio" class="audio-icon-img" />
+            <img
+              src="/statues/bocina.png"
+              alt="Reproducir Audio"
+              class="audio-icon-img"
+            />
           </button>
 
           <!-- Contenedor de audio -->
-          <div class="audio-container" id="audioContainer1" style="display: none;">
+          <div
+            class="audio-container"
+            id="audioContainer1"
+            style="display: none;"
+          >
             <audio id="audioPlayer1" controls>
-              <source id="audioSource" src="/audio/La_Ballena_Jorobada.mp3" type="audio/mp3">
-              <source id="audioSourceOgg" src="/audio/La_Ballena_Jorobada.ogg" type="audio/ogg">
+              <source
+                id="audioSource"
+                src="/audio/La_Ballena_Jorobada.mp3"
+                type="audio/mp3"
+              />
+              <source
+                id="audioSourceOgg"
+                src="/audio/La_Ballena_Jorobada.ogg"
+                type="audio/ogg"
+              />
               Tu navegador no soporta el elemento de audio.
             </audio>
           </div>
@@ -107,12 +170,16 @@ import '../styles/historical.css';
       </div>
     </div>
 
-
     <!-- Imagen 4 (actual) -->
     <div class="carousel-item">
       <div class="image-item central" onclick="changeImage('paloma')">
-        <img src="/statues/paloma.webp" alt="Estatua de La Paloma" class="carousel-image" id="paloma">
-        
+        <img
+          src="/statues/paloma.webp"
+          alt="Estatua de La Paloma"
+          class="carousel-image"
+          id="paloma"
+        />
+
         <!-- Información en columnas -->
         <div class="description">
           <div class="info-column">
@@ -129,203 +196,773 @@ import '../styles/historical.css';
 
           <div class="info-column">
             <div class="info-item">
-              <strong>Descripción:</strong> Escultura monumental en bronce color verde de 2.5 metros de alto y 1 tonelada de peso, aproximadamente, creada por el gran artista plástico mexicano Juan Soriano, con la técnica de cera perdida. El cuerpo de la paloma se orienta hacia el este, mientras que la cabeza mira al sur.
-              Instalada sobre un basamento circular de 8 metros de diámetro, se divide en tres niveles: el primero, que es la base, tiene una altura de 63 centímetros, cuyo perímetro y superficie superior están recubiertos de azulejo color blanco; el segundo, está conformado por una rosa de los vientos de concreto, en dos dimensiones, una de menor tamaño y con escalones y otra que muestra los cuatro puntos cardinales; y, el tercero, es la plataforma sobre la que posa directamente la silueta. El segundo y el tercer nivel están pintados en color café.
-              El conjunto arquitectónico posee cuatro placas metálicas: la primera, señala el nombre de la escultura, del autor, la altura, el material utilizado y el año de creación; la segunda, refiere el acto en que el presidente de la República hizo entrega de la isla Espíritu Santo como patrimonio natural para su conservación; la tercera, contiene la declaratoria de área natural protegida de la zona del archipiélago de Espíritu Santo, otorgándole la categoría de parque nacional, lo que se publicó en el Diario Oficial de la Federación, el 10 de mayo de 2007; y, la cuarta, que se encuentra en la misma glorieta, a 2 metros de distancia en sentido norponiente y sobre una base de concreto de 80 centímetros de altura, precisa que las islas y las áreas protegidas del Golfo de California fueron inscritas en la lista de Patrimonio Mundial de la Unesco, el 14 de julio de 2005 (pero cuya develación ocurrió en septiembre de 2007, a cargo del entonces presidente de la República, Vicente Fox, y del gobernador de la entidad, Narciso Agúndez Montaño).
-              
+              <strong>Descripción:</strong> Escultura monumental en bronce color
+              verde de 2.5 metros de alto y 1 tonelada de peso, aproximadamente,
+              creada por el gran artista plástico mexicano Juan Soriano, con la técnica
+              de cera perdida. El cuerpo de la paloma se orienta hacia el este, mientras
+              que la cabeza mira al sur. Instalada sobre un basamento circular de
+              8 metros de diámetro, se divide en tres niveles: el primero, que es
+              la base, tiene una altura de 63 centímetros, cuyo perímetro y superficie
+              superior están recubiertos de azulejo color blanco; el segundo, está
+              conformado por una rosa de los vientos de concreto, en dos dimensiones,
+              una de menor tamaño y con escalones y otra que muestra los cuatro puntos
+              cardinales; y, el tercero, es la plataforma sobre la que posa directamente
+              la silueta. El segundo y el tercer nivel están pintados en color café.
+              El conjunto arquitectónico posee cuatro placas metálicas: la primera,
+              señala el nombre de la escultura, del autor, la altura, el material
+              utilizado y el año de creación; la segunda, refiere el acto en que
+              el presidente de la República hizo entrega de la isla Espíritu Santo
+              como patrimonio natural para su conservación; la tercera, contiene
+              la declaratoria de área natural protegida de la zona del archipiélago
+              de Espíritu Santo, otorgándole la categoría de parque nacional, lo
+              que se publicó en el Diario Oficial de la Federación, el 10 de mayo
+              de 2007; y, la cuarta, que se encuentra en la misma glorieta, a 2 metros
+              de distancia en sentido norponiente y sobre una base de concreto de
+              80 centímetros de altura, precisa que las islas y las áreas protegidas
+              del Golfo de California fueron inscritas en la lista de Patrimonio
+              Mundial de la Unesco, el 14 de julio de 2005 (pero cuya develación
+              ocurrió en septiembre de 2007, a cargo del entonces presidente de la
+              República, Vicente Fox, y del gobernador de la entidad, Narciso Agúndez
+              Montaño).
             </div>
           </div>
 
           <div class="info-column">
             <div class="info-item">
-              <strong>Historia:</strong> La paloma de Soriano, como es conocida esta reproducción en menor escala de la que se encuentra en la entrada del Museo de Arte Contemporáneo (MARCO), en Monterrey, Nuevo León, fue creada en 1990 e instalada al año siguiente, durante la inauguración del museo. Ésta, que en la promoción del museo se indica con seis metros de altura, se puede apreciar en el catálogo del autor y se indica que cuenta con 4 metros de altura. Otras reproducciones de la misma, en menor tamaño, se localizan en el Museo Juan Soriano, en Cuernavaca, Morelos, y frente a la catedral en Campeche, Campeche. Esta obra también cuenta con una reproducción que se entrega cada año, desde 2014, por parte de la Fundación Xochitla, en el estado de México, a instituciones y personas dedicadas a la investigación y promoción ambiental.
+              <strong>Historia:</strong> La paloma de Soriano, como es conocida esta
+              reproducción en menor escala de la que se encuentra en la entrada del
+              Museo de Arte Contemporáneo (MARCO), en Monterrey, Nuevo León, fue
+              creada en 1990 e instalada al año siguiente, durante la inauguración
+              del museo. Ésta, que en la promoción del museo se indica con seis metros
+              de altura, se puede apreciar en el catálogo del autor y se indica que
+              cuenta con 4 metros de altura. Otras reproducciones de la misma, en
+              menor tamaño, se localizan en el Museo Juan Soriano, en Cuernavaca,
+              Morelos, y frente a la catedral en Campeche, Campeche. Esta obra también
+              cuenta con una reproducción que se entrega cada año, desde 2014, por
+              parte de la Fundación Xochitla, en el estado de México, a instituciones
+              y personas dedicadas a la investigación y promoción ambiental.
             </div>
           </div>
 
           <!-- Icono de audio -->
           <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
-            <img src="/statues/bocina.png" alt="Reproducir Audio" class="audio-icon-img" />
+            <img
+              src="/statues/bocina.png"
+              alt="Reproducir Audio"
+              class="audio-icon-img"
+            />
           </button>
 
           <!-- Contenedor de audio -->
-          <div class="audio-container" id="audioContainer1" style="display: none;">
+          <div
+            class="audio-container"
+            id="audioContainer1"
+            style="display: none;"
+          >
             <audio id="audioPlayer1" controls>
-              <source id="audioSource" src="/audio/La_Ballena_Jorobada.mp3" type="audio/mp3">
-              <source id="audioSourceOgg" src="/audio/La_Ballena_Jorobada.ogg" type="audio/ogg">
+              <source
+                id="audioSource"
+                src="/audio/La_Ballena_Jorobada.mp3"
+                type="audio/mp3"
+              />
+              <source
+                id="audioSourceOgg"
+                src="/audio/La_Ballena_Jorobada.ogg"
+                type="audio/ogg"
+              />
               Tu navegador no soporta el elemento de audio.
             </audio>
           </div>
         </div>
       </div>
     </div>
-<!-- Imagen 5 (actual) -->
-<div class="carousel-item">
-  <div class="image-item central" onclick="changeImage('mantarraya')">
-    <img src="/statues/mantarraya.jpg" alt="Estatua de la Mantarraya" class="carousel-image" id="mantarraya">
-    
-    <!-- Información en columnas -->
-    <div class="description">
-      <div class="info-column">
-        <div class="info-item">
-          <strong>Autor:</strong> Manuel Salvador Rocha Higuera
-        </div>
-        <div class="info-item">
-          <strong>Material:</strong> Bronce
-        </div>
-        <div class="info-item">
-          <strong><p>Año</p>:</strong> 2006
+
+    <!-- Imagen 5 (actual) -->
+    <div class="carousel-item">
+      <div class="image-item central" onclick="changeImage('mantarraya')">
+        <img
+          src="/statues/mantarraya.jpg"
+          alt="Estatua de la Mantarraya"
+          class="carousel-image"
+          id="mantarraya"
+        />
+
+        <!-- Información en columnas -->
+        <div class="description">
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Autor:</strong> Manuel Salvador Rocha Higuera
+            </div>
+            <div class="info-item">
+              <strong>Material:</strong> Bronce
+            </div>
+            <div class="info-item">
+              <strong><p>Año</p>:</strong> 2006
+            </div>
+          </div>
+
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Descripción:</strong> La escultura en bronce, con una altura
+              de 3.15 metros, instalada una base rectangular de concreto color cafe,
+              que cuenta con tres cubos en desnivel, representa la figura de una
+              mantarraya que tiene las aletas extendidas, en vuelo sobre el mar,
+              y cuya parte inferior se une a dos olas, ademas de que se aprecia el
+              relieve de las branquias. De acuerdo con el autor, creo el diseño a
+              partir de un cumulo de imagenes que el mismo observo de este animal
+              marino durante su infancia, en las costas de Mulegue. Una de las mas
+              significativas es cuando la mantarraya se eleva por los aires y parece
+              girar sobre su eje antes de regresar al mar.
+            </div>
+          </div>
+
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Historia:</strong> La mantarraya gigante o manta cubana representada
+              en la escultura es una especie que abunda en los mares que rodean a
+              Baja California Sur, se distingue por su cuerpo plano,pueden medir
+              hasta nueve metros de ancho y tener un peso que superalos mil kilogramos.
+              El color del cuerpo es variable, dentro de la gama de tonos oscuros,
+              negro o azul grisaceo en la parte superior, y color blanco con "motas"
+              grises en la parte inferior. En Baja California Sur, como en otras
+              partes del mundo, la observación de mantarrayas se ha convertido un
+              atractivo turístico; no obstante, su población ha disminuido en los
+              últimos años, a pesar de la protección que tiene en algunas regiones
+              del mundo.
+            </div>
+
+            <!-- Icono de audio -->
+            <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
+              <img
+                src="/statues/bocina.png"
+                alt="Reproducir Audio"
+                class="audio-icon-img"
+              />
+            </button>
+
+            <!-- Contenedor de audio -->
+            <div
+              class="audio-container"
+              id="audioContainer1"
+              style="display: none;"
+            >
+              <audio id="audioPlayer1" controls>
+                <source
+                  id="audioSource"
+                  src="/audio/La_Ballena_Jorobada.mp3"
+                  type="audio/mp3"
+                />
+                <source
+                  id="audioSourceOgg"
+                  src="/audio/La_Ballena_Jorobada.ogg"
+                  type="audio/ogg"
+                />
+                Tu navegador no soporta el elemento de audio.
+              </audio>
+            </div>
+          </div>
         </div>
       </div>
- 
-      <div class="info-column">
-        <div class="info-item">
-          <strong>Descripción:</strong> La escultura en bronce, con una altura de 3.15 metros, instalada una base rectangular de concreto color cafe, que cuenta con tres cubos en desnivel, representa la figura de una mantarraya que tiene las aletas extendidas, en vuelo sobre el mar, y cuya parte inferior se une a dos olas, ademas de que se aprecia el relieve de las branquias. De acuerdo con el autor, creo el diseño a partir de un cumulo de imagenes que el mismo observo de este animal marino durante su infancia, en las costas de Mulegue. Una de las mas significativas es cuando la mantarraya se eleva por los aires y parece girar sobre su eje antes de regresar al mar.
+    </div>
+
+    <!-- Imagen 6 (actual) -->
+    <div class="carousel-item">
+      <div class="image-item central" onclick="changeImage('paraiso el mar')">
+        <img
+          src="/statues/paraiso del mar.webp"
+          alt="Estatua el paraiso"
+          class="carousel-image"
+          id="paraiso del mar"
+        />
+
+        <!-- Información en columnas -->
+        <div class="description">
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Autor:</strong> Octavio Gonzalez Gutierrez
+            </div>
+            <div class="info-item">
+              <strong>Material:</strong> Bronce
+            </div>
+            <div class="info-item">
+              <strong>Año:</strong> 2004
+            </div>
+          </div>
+
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Descripción:</strong> Conjunto escultorico de 3.95 metros de
+              altura, en el que destacan las figuras de una sirena y un delfin en
+              posicion de nado, con direccion hacia el norte de la ciudad de La Paz,
+              ambos cuerpos se sostienen por una esfera de bronce, colocada sobre
+              cinco tubos cilindricos metalicos y una placa anclada al suelo, El
+              cuerpo de la sirena se destaca por la cuidadosa elaboracion de los
+              detalles: el cabello ondulante, la piel escamada, las piernas y el
+              busto.
+            </div>
+          </div>
+
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Historia:</strong>
+              La sirena es un personaje mítico que se encuentra en diversas expresiones
+              populares, desde la Antigüedad hasta el presente, con un papel protagónico
+              o importante en la literatura universal. En el siglo IX de nuestra
+              era surge una adscripción que se mantiene prácticamente intacta hasta
+              la actualidad, como se señala al inicio del presente apartado. De igual
+              manera, la imagen de las sirenas ocupa un lugar especial en buena parte
+              de los artistas visuales que, como precisa el buen Octavio González,
+              es un atractivo permanente desde la niñez y que plasman en pinturas,
+              murales y como en este caso, esculturas.
+            </div>
+          </div>
+
+          <!-- Icono de audio -->
+          <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
+            <img
+              src="/statues/bocina.png"
+              alt="Reproducir Audio"
+              class="audio-icon-img"
+            />
+          </button>
+
+          <!-- Contenedor de audio -->
+          <div
+            class="audio-container"
+            id="audioContainer1"
+            style="display: none;"
+          >
+            <audio id="audioPlayer1" controls>
+              <source
+                id="audioSource"
+                src="/audio/La_Ballena_Jorobada.mp3"
+                type="audio/mp3"
+              />
+              <source
+                id="audioSourceOgg"
+                src="/audio/La_Ballena_Jorobada.ogg"
+                type="audio/ogg"
+              />
+              Tu navegador no soporta el elemento de audio.
+            </audio>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="info-column">
-        <div class="info-item">
-          <strong>Historia:</strong> La mantarraya gigante o manta cubana representada en la escultura es una especie que abunda en los mares que rodean a Baja California Sur, se distingue por su cuerpo plano,pueden medir hasta nueve metros de ancho y tener un peso que superalos mil kilogramos. El color del cuerpo es variable, dentro de la gama de tonos oscuros, negro o azul grisaceo en la parte superior, y color blanco con "motas" grises en la parte inferior. En Baja California Sur, como en otras partes del mundo, la observación de mantarrayas se ha convertido un atractivo turístico; no obstante, su población ha disminuido en los últimos años, a pesar de la protección que tiene en algunas regiones del mundo.
-      
-      </div>
+    <!-- Imagen 7 (actual) -->
+    <div class="carousel-item">
+      <div
+        class="image-item central"
+        onclick="changeImage('JACQUES YVES COUSTEAU')"
+      >
+        <img
+          src="/statues/cousteau.jpg"
+          alt="Estatua de JACQUES YVES COUSTEAU"
+          class="carousel-image"
+          id="cousteau"
+        />
 
-      <!-- Icono de audio -->
-      <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
-        <img src="/statues/bocina.png" alt="Reproducir Audio" class="audio-icon-img" />
-      </button>
+        <!-- Información en columnas -->
+        <div class="description">
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Autor:</strong> Salvador Rocha
+            </div>
+            <div class="info-item">
+              <strong>Material:</strong> Bronce
+            </div>
+            <div class="info-item">
+              <strong>Año:</strong> 2012
+            </div>
+          </div>
 
-      <!-- Contenedor de audio -->
-      <div class="audio-container" id="audioContainer1" style="display: none;">
-        <audio id="audioPlayer1" controls>
-          <source id="audioSource" src="/audio/La_Ballena_Jorobada.mp3" type="audio/mp3">
-          <source id="audioSourceOgg" src="/audio/La_Ballena_Jorobada.ogg" type="audio/ogg">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Descripción:</strong> La escultura en homenaje al oceanógrafo
+              Jacques Yves Costeau es una figura de cuerpo completo del personaje
+              que se ubica sobre una plataforma de concreto en cuatro niveles, que
+              incluye tres escalones y una base circular en el centro. La escultura
+              se halla sentada con una posición donde Costeau, con el brazo sobre
+              su frente, mira hacia el norte de la bahía de La Paz y el Mar de Cortés
+              que tantas veces recorrió. El cuerpo del investigador francés se encuentra
+              cubierto con traje de buzo y la gorra en la cabeza que le caracterizó
+              en infinidad de imágenes. Además, se acompaña del sistema de buceo
+              que inventó para sumergirse en el mar y que sustituyó la antigua escafandra.
+              También se incluye una cámara fotográfica a la que se le adaptó un
+              mecanismo para ser utilizada en el fondo del mar. La efigie se encuentra
+              sentada sobre la punta de una lancha que al autor le recuerda la posición
+              de aquéllas en la orilla de la playa después del paso de un huracán.
+              En ella se localizan un par de aletas de buceo. Originalmente, la obra
+              contenía los tres colores de la bandera francesa: rojo en las aletas,
+              blanco en la orilla de la lancha y azul en el exterior de la misma;
+              sin embargo, el efecto del sol sobre la escultura ha desvanecido los
+              colores. El conjunto se encuentra en buenas condiciones, aunque poco
+              tiempo después de la inauguración se descompusieron los siete reflectores
+              que se localizan sobre la plataforma, así como el que se ubica en uno
+              de los postes de la calle. Jacques-Yves Cousteau, denominó al Mar de
+              Cortés “El acuario del mundo”, por ser considerado el mayor laboratorio
+              natural para la investigación de especies marinas. Una de las más importantes
+              contribuciones a la investigación subacuática fue el diseño de una
+              cámara destinada a las grabaciones submarinas. La obra posee una placa
+              de inauguración con los siguientes datos "El Mar de Cortés. 'El acuario
+              del mundo'. Jacques Yves Costeau. 1919-1997. Fue inventor de numerosos
+              ingenios de exploración submarina, Cousteau, a bordo de su famosa nave
+              Calypso, fue capaz de llevar a los hogares los misterios y las maravillas
+              del mundo submarino, y fue uno de los pioneros en la defensa de las
+              causas ecologistas. Cousteau contribuyó en gran medida a que los buzos
+              de hoy puedan moverse casi con la ligereza de los peces en el agua,
+              y no como caballeros con armaduras medievales. Sus trabajos en la exploración,
+              divulgación y conservación de las maravillas del mundo subacuático
+              le valieron tanto incontables galardones como el reconocimiento internacional.
+            </div>
+          </div>
+
+          <div class="info-column">
+            <div class="info-item">
+              <strong>Historia:</strong> El capitán Jacques Yves Cousteau nació en
+              Francia en 1910 y murió en su país en 1997. Es reconocido mundialmente
+              como explorador, investigador, fotógrafo y difusor de la defensa de
+              los mares de nuestro planeta, por lo que la ONU le otorgó el Premio
+              Internacional sobre el Medio Ambiente. Posteriormente, en 1985, Ronald
+              Reagan, presidente de Estados Unidos de América, le confirió la Medalla
+              Presidencial de la Libertad. Cousteau realizó más de un centenar de
+              películas, documentales y libros sobre el mundo submarino con su buque,
+              el Calypso. En 1973 fundó la Sociedad Cousteau, que años después se
+              transformó en fundación. Llevó a cabo especiales trabajos de investigación
+              en el Mar de Cortés, al que llegó a caracterizar como el "acuario del
+              mundo", por la diversidad de las especies que encontró en esta área.
+              Fue el coinventor de la escafandra autónoma como un modelo de los actuales
+              equipos de buceo, así como de la adaptación de las cámaras fotográficas
+              al medio acuático.30 En nuestra entidad, como memoria de su visita
+              a las costas de Santa Rosalía, esta localidad cuenta con una avenida
+              con su nombre. Acerca de Cousteau, resulta oportuno comentar que el
+              17 de noviembre de 2009 el ejecutivo federal, como un acuerdo del director
+              del Inegi, publicó en el Diario Oficial de la Federación» la "actualización
+              del nombre" de la isla Cerralvo, a la que se le asignaba el nombre
+              del reconocido oceanógrafo francés, acto que generó controversia y
+              en cuya discusión el historiador Miguel León-Portilla consideró como
+              una "auténtica aberración", no por restar méritos a Cousteau, sino
+              porque elimina sin consulta una tradición histórica en la toponimia
+              en Baja California Sur, pues el nombre original data del siglo XVII.
+              El referido acuerdo sólo citó atribuciones federales en materia de
+              administración de las islas del país, pero no mencionó razón alguna
+              sobre el nuevo nombre. Sin embargo, la cancelación o explicación gubernamental
+              no se ha presentado hasta el momento. La creación de la escultura de
+              Cousteau se dio en el marco del proyecto "Diseño, elaboración y suministro
+              de esculturas en el andador turístico del malecón costero en la ciudad
+              de La Paz, BCS", que puso en marcha el Fideicomiso de administración,
+              inversión y fuente de pago para obras de Infraestructura social, turística
+              y equipamiento urbano del municipio de La Paz (FOIS, como es conocido),
+              al reasignar el monto que originalmente se había autorizado para la
+              construcción del monumento Muro encuentro de dos culturas, el cual
+              posteriormente se estimó como inviable. Previamente a la autorización
+              de la escultura de Costeau, el FOIS había realizado la creación e instalación
+              de dos esculturas, de cuyo remanente económico se estimó conveniente
+              llevar a cabo, mediante adjudicación directa, una tercera obra. De
+              acuerdo con el contrato, la encomienda se encargó al escultor Salvador
+              Rocha, quien se comprometió a realizarla en el periodo de diciembre
+              de 2011 a marzo de 2012, cuyos términos se cumplieron en tiempo y forma.
+              El acta de entrega-recepción señaló que la escultura de Costeau, elaborada
+              en bronce con una altura de 1.70 metros y un peso de 400 kilogramos,
+              se instaló en la glorieta ubicada en el Paseo Álvaro Obregón, frente
+              a la esquina de la calle República, la cual fue entregada al Ayuntamiento
+              de La Paz el 3 de abril de 2012 "para su resguardo, custodia, vigilancia
+              y mantenimiento" La estatua fue inaugurada el 15 de mayo de 2012, en
+              el marco de la Semana de Francia en La Paz. En representación de la
+              alcaldesa y del gobernador acudieron el séptimo regidor del Ayuntamiento,
+              Ricardo Fiol Higuera, y Jesús Fabián Barajas Sandoval, director del
+              Instituto Sudcaliforniano de Cultura, respectivamente.
+            </div>
+          </div>
+
+          <!-- Icono de audio -->
+          <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
+            <img
+              src="/statues/bocina.png"
+              alt="Reproducir Audio"
+              class="audio-icon-img"
+            />
+          </button>
+
+          <!-- Contenedor de audio -->
+          <div
+            class="audio-container"
+            id="audioContainer1"
+            style="display: none;"
+          >
+            <audio id="audioPlayer1" controls>
+              <source
+                id="audioSource"
+                src="/audio/La_Ballena_Jorobada.mp3"
+                type="audio/mp3"
+              />
+              <source
+                id="audioSourceOgg"
+                src="/audio/La_Ballena_Jorobada.ogg"
+                type="audio/ogg"
+              />
+              Tu navegador no soporta el elemento de audio.
+            </audio>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
 
-<!-- Imagen 6 (actual) -->
-<div class="carousel-item">
-  <div class="image-item central" onclick="changeImage('paraiso el mar')">
-    <img src="/statues/paraiso del mar.webp" alt="Estatua el paraiso" class="carousel-image" id="paraiso del mar">
-    
-    <!-- Información en columnas -->
-    <div class="description">
-      <div class="info-column">
-        <div class="info-item">
-          <strong>Autor:</strong> Octavio Gonzalez Gutierrez
-        </div>
-        <div class="info-item">
-          <strong>Material:</strong> Bronce
-        </div>
-        <div class="info-item">
-          <strong>Año:</strong> 2004
-        </div>
-      </div>
+  <!-- Imagen 8 (actual) -->
+  <div class="carousel-item">
+    <div class="image-item central" onclick="changeImage('Jesus del Caracol')">
+      <img
+        src="/statues/jesusDelCaracol.jpg"
+        alt="Estatua de jesusDelCaracol"
+        class="carousel-image"
+        id="jesusDelCaracol"
+      />
 
-      <div class="info-column">
-        <div class="info-item">
-          <strong>Descripción:</strong> Conjunto escultorico de 3.95 metros de altura, en el que destacan las figuras de una sirena y un delfin en posicion de nado, con direccion hacia el norte de la ciudad de La Paz, ambos cuerpos se sostienen por una esfera de bronce, colocada sobre cinco tubos cilindricos metalicos y una placa anclada al suelo, El cuerpo de la sirena se destaca por la cuidadosa elaboracion de los detalles: el cabello ondulante, la piel escamada, las piernas y el busto.
+      <!-- Información en columnas -->
+      <div class="description">
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Autor:</strong> Maria Eugenia Sanchez Cuevas
+          </div>
+          <div class="info-item">
+            <strong>Material:</strong> Bronce
+          </div>
+          <div class="info-item">
+            <strong>año:</strong> 1996
+          </div>
         </div>
-      </div>
 
-      <div class="info-column">
-        <div class="info-item">
-          <strong>Historia:</strong>
-          La sirena es un personaje mítico que se encuentra en diversas expresiones populares, desde la Antigüedad hasta el presente, con un papel protagónico o importante en la literatura universal. En el siglo IX de nuestra era surge una adscripción que se mantiene prácticamente intacta hasta la actualidad, como se señala al inicio del presente apartado.
-          De igual manera, la imagen de las sirenas ocupa un lugar especial en buena parte de los artistas visuales que, como precisa el buen Octavio González, es un atractivo permanente desde la niñez y que plasman en pinturas, murales y como en este caso, esculturas. 
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Descripcion:</strong>
+            Escultura en bronce con la tecnica de la cera perdida, de la artista
+            Maria Eugenia Sanchez Cuevas, que representa la imagen de jesuscristo,
+            barbado,ataviado con una tunica, en posicion de pie y dando un pie hacia
+            adelante. En su mano deerecha se eleva un Caracol. Se encuentra sobre
+            una glorieta que tiene un diametro de 4.80 metros, en dos niveles: el
+            primero es una jardinera y el segundo es la base para la figura, que
+            mide 2.70 metros de altura y da la espalda a la ensenada de la bahia
+            de La Paz, mirando hacia el oriente.
+          </div>
         </div>
-      </div>
 
-      <!-- Icono de audio -->
-      <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
-        <img src="/statues/bocina.png" alt="Reproducir Audio" class="audio-icon-img" />
-      </button>
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Historia:</strong>
+            En 1996, la figura se coloco inicialmente ene le fondo de la playa Balandra,
+            al norte de la ciudad de La Paz, con el propocito de que fuera apreciada
+            por los buceadores en sus inmerciones; pero,debido a la escasa profundidad
+            de las aguas y de las mareas que impedian su visibilidad, se retiro de
+            lugar, para trasladarla al actual sitio en el malecon, donde se instalo
+            en 1998. Esta obra artistica tiene una copia que en 1997 tambien fue
+            hundida en el mar, frente a la isla de Cocos, en Costa Rica.
+          </div>
+        </div>
 
-      <!-- Contenedor de audio -->
-      <div class="audio-container" id="audioContainer1" style="display: none;">
-        <audio id="audioPlayer1" controls>
-          <source id="audioSource" src="/audio/La_Ballena_Jorobada.mp3" type="audio/mp3">
-          <source id="audioSourceOgg" src="/audio/La_Ballena_Jorobada.ogg" type="audio/ogg">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
+        <!-- Icono de audio -->
+        <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
+          <img
+            src="/statues/bocina.png"
+            alt="Reproducir Audio"
+            class="audio-icon-img"
+          />
+        </button>
+
+        <!-- Contenedor de audio -->
+        <div
+          class="audio-container"
+          id="audioContainer1"
+          style="display: none;"
+        >
+          <audio id="audioPlayer1" controls>
+            <source
+              id="audioSource"
+              src="/audio/La_Ballena_Jorobada.mp3"
+              type="audio/mp3"
+            />
+            <source
+              id="audioSourceOgg"
+              src="/audio/La_Ballena_Jorobada.ogg"
+              type="audio/ogg"
+            />
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Imagen 7 (actual) -->
-<div class="carousel-item">
-  <div class="image-item central" onclick="changeImage('JACQUES YVES COUSTEAU')">
-    <img src="/statues/cousteau.jpg" alt="Estatua de JACQUES YVES COUSTEAU" class="carousel-image" id="cousteau">
-    
-    <!-- Información en columnas -->
-    <div class="description">
-      <div class="info-column">
-        <div class="info-item">
-          <strong>Autor:</strong> Salvador Rocha
-        </div>
-        <div class="info-item">
-          <strong>Material:</strong> Bronce
-        </div>
-        <div class="info-item">
-          <strong>Año:</strong> 2012
-        </div>
-      </div>
+  <!-- Imagen 9 (actual) -->
+  <div class="carousel-item">
+    <div class="image-item central" onclick="changeImage('laMujerDeNautilos')">
+      <img
+        src="/statues/laMujerDeNautilos.jpg"
+        alt="laMujerDeNautilus.jpg"
+        class="carousel-image"
+        id="laMujerDeNautilus"
+      />
 
-      <div class="info-column">
-        <div class="info-item">
-          <strong>Descripción:</strong> La escultura en homenaje al oceanógrafo Jacques Yves Costeau es una figura de cuerpo completo del personaje que se ubica sobre una plataforma de concreto en cuatro niveles, que incluye tres escalones y una base circular en el centro. La escultura se halla sentada con una posición donde Costeau, con el brazo sobre su frente, mira hacia el norte de la bahía de La Paz y el Mar de Cortés que tantas veces recorrió. El cuerpo del investigador francés se encuentra cubierto con traje de buzo y la gorra en la cabeza que le caracterizó en infinidad de imágenes. Además, se acompaña del sistema de buceo que inventó para sumergirse en el mar y que sustituyó la antigua escafandra. También se incluye una cámara fotográfica a la que se le adaptó un mecanismo para ser utilizada en el fondo del mar. La efigie se encuentra sentada sobre la punta de una lancha que al autor le recuerda la posición de aquéllas en la orilla de la playa después del paso de un huracán. En ella se localizan un par de aletas de buceo. Originalmente, la obra contenía los tres colores de la bandera francesa: rojo en las aletas, blanco en la orilla de la lancha y azul en el exterior de la misma; sin embargo, el efecto del sol sobre la escultura ha 
-          desvanecido los colores. El conjunto se encuentra en buenas condiciones, aunque poco tiempo después de la inauguración se descompusieron los siete reflectores que se localizan sobre la plataforma, así como el que se ubica en uno de los postes de la calle.
-          Jacques-Yves Cousteau, denominó al Mar de Cortés “El acuario del mundo”, por ser considerado el mayor laboratorio natural para la investigación de especies marinas.
-          Una de las más importantes contribuciones a la investigación subacuática fue el diseño de una cámara destinada a las grabaciones submarinas. La obra posee una placa de inauguración con los siguientes datos "El Mar de Cortés. 'El acuario del mundo'. Jacques Yves Costeau. 1919-1997. Fue inventor de numerosos ingenios de exploración submarina, Cousteau, a bordo de su famosa nave Calypso, fue capaz de llevar a los hogares los misterios y las maravillas del mundo submarino, y fue uno de los pioneros en la defensa de las causas ecologistas. 
-          Cousteau contribuyó en gran medida a que los buzos de hoy puedan moverse casi con la ligereza de los peces en el agua, y no como caballeros con armaduras medievales.
-          Sus trabajos en la exploración, divulgación y conservación de las maravillas del mundo subacuático le valieron tanto incontables galardones como el reconocimiento internacional. 
-          
-         
-          
+      <!-- Información en columnas -->
+      <div class="description">
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Autor:</strong> Jose Kuri Breña
+          </div>
+          <div class="info-item">
+            <strong>Material:</strong> Bronce
+          </div>
+          <div class="info-item">
+            <strong>año:</strong> 2007
+          </div>
         </div>
-      </div>
 
-      <div class="info-column">
-        <div class="info-item">
-          <strong>Historia:</strong> El capitán Jacques Yves Cousteau nació en Francia en 1910 y murió en su país en 1997. Es reconocido mundialmente como explorador, investigador, fotógrafo y difusor de la defensa de los mares de nuestro planeta, por lo que la ONU le otorgó el Premio Internacional sobre el Medio Ambiente.
-          Posteriormente, en 1985, Ronald Reagan, presidente de Estados Unidos de América, le confirió la Medalla Presidencial de la Libertad. Cousteau realizó más de un centenar de películas, documentales y libros sobre el mundo submarino con su buque, el Calypso. En 1973 fundó la Sociedad Cousteau, que años después se transformó en fundación. Llevó a cabo especiales trabajos de investigación en el Mar de Cortés, al que llegó a caracterizar como el "acuario del mundo", por la diversidad de las especies que encontró en esta área. Fue el coinventor de la escafandra autónoma como un modelo de los actuales equipos de buceo, así como de la adaptación de las cámaras fotográficas al medio acuático.30 En nuestra entidad, como memoria de su visita a las costas de Santa Rosalía, esta localidad cuenta con una avenida con su nombre. Acerca de Cousteau, resulta oportuno comentar que el 17 de noviembre de 2009 el ejecutivo federal, como un acuerdo del director del Inegi, publicó en el Diario Oficial de la Federación» la "actualización del nombre" de la isla Cerralvo, a la que se le asignaba el nombre del reconocido oceanógrafo francés, acto que generó controversia y en cuya discusión el historiador Miguel León-Portilla consideró como una "auténtica aberración", no por restar méritos a Cousteau, sino porque elimina sin consulta una tradición histórica en la toponimia en Baja California Sur, pues el nombre original data del siglo XVII. El referido acuerdo sólo citó atribuciones federales en materia de administración de las islas del país, pero no mencionó razón alguna sobre el nuevo nombre. Sin embargo, la cancelación o explicación gubernamental no se ha presentado hasta el momento.
-          La creación de la escultura de Cousteau se dio en el marco del proyecto "Diseño, elaboración y suministro de esculturas en el andador turístico del malecón costero en la ciudad de La Paz, BCS", que puso en marcha el Fideicomiso de administración, inversión y fuente de pago para obras de Infraestructura social, turística y equipamiento urbano del municipio de La Paz (FOIS, como es conocido), al reasignar el monto que originalmente se había autorizado para la construcción del monumento Muro encuentro de dos culturas, el cual posteriormente se estimó como inviable.
-          Previamente a la autorización de la escultura de Costeau, el FOIS había realizado la creación e instalación de dos esculturas, de cuyo remanente económico se estimó conveniente llevar a cabo, mediante adjudicación directa, una tercera obra. De acuerdo con el contrato, la encomienda se encargó al escultor Salvador Rocha, quien se comprometió a realizarla en el periodo de diciembre de 2011 a marzo de 2012, cuyos términos se cumplieron en tiempo y forma. El acta de entrega-recepción señaló que la escultura de Costeau, elaborada en bronce con una altura de 1.70 metros y un peso de 400 kilogramos, se instaló en la glorieta ubicada en el Paseo Álvaro Obregón, frente a la esquina de la calle República, la cual fue entregada al Ayuntamiento de La Paz el 3 de abril de 2012 "para su resguardo, custodia, vigilancia y mantenimiento" 
-          La estatua fue inaugurada el 15 de mayo de 2012, en el marco de la Semana de Francia en La Paz. En representación de la alcaldesa y del gobernador acudieron el séptimo regidor del Ayuntamiento, Ricardo Fiol Higuera, y Jesús Fabián Barajas Sandoval, director del Instituto Sudcaliforniano de Cultura, respectivamente.
-           
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Dy 2.20 metros de anchoescripcion:</strong>
+            Cultura en bronce que representa la imagen de una mujer fundida en el
+            cuerpo de un molusco cefalopodo de la familia nautilidad. La obra tiene
+            una altura de 1.40 metros y 70 centimetros de ancho. Se alla colocada
+            sobre un pedestal de concreto de 1.10 metros de alto y 70 centimetros
+            de anchoque a su vez, se soporta en una plataforma de 15 centimetros
+            de grosor y 2.20 metros de ancho. En la parte frontal de la base se localiza
+            una placa de mármol que indica los datos del autor, y la constancia de
+            que la escultura fue donada por la familia Kuri Breña, como una aportación
+            al patrimonio artístico de la ciudad de la paz y la belleza natural de
+            la bahía, en homenaje póstumo al autor y su obra, al tiempo que se señala
+            el mes y año de la entrega. La obra se ubica en una pequeña glorieta
+            protegida por herrería, y cuenta con un sistema de iluminación.
+          </div>
         </div>
-      </div>
 
-      <!-- Icono de audio -->
-      <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
-        <img src="/statues/bocina.png" alt="Reproducir Audio" class="audio-icon-img" />
-      </button>
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Historia:</strong>
+            La obra fue donada por la familia del autor, en cuya decisión intervino
+            fundamentalmente el entonces secretario de Hacienda y Crédito Publico,
+            José Antonio Meade Kuri Breña, nieto del artista y asiduo visitante de
+            la Ciudad de La Paz.
+          </div>
+        </div>
 
-      <!-- Contenedor de audio -->
-      <div class="audio-container" id="audioContainer1" style="display: none;">
-        <audio id="audioPlayer1" controls>
-          <source id="audioSource" src="/audio/La_Ballena_Jorobada.mp3" type="audio/mp3">
-          <source id="audioSourceOgg" src="/audio/La_Ballena_Jorobada.ogg" type="audio/ogg">
-          Tu navegador no soporta el elemento de audio.
-        </audio>
+        <!-- Icono de audio -->
+        <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
+          <img
+            src="/statues/bocina.png"
+            alt="Reproducir Audio"
+            class="audio-icon-img"
+          />
+        </button>
+
+        <!-- Contenedor de audio -->
+        <div
+          class="audio-container"
+          id="audioContainer1"
+          style="display: none;"
+        >
+          <audio id="audioPlayer1" controls>
+            <source
+              id="audioSource"
+              src="/audio/La_Ballena_Jorobada.mp3"
+              type="audio/mp3"
+            />
+            <source
+              id="audioSourceOgg"
+              src="/audio/La_Ballena_Jorobada.ogg"
+              type="audio/ogg"
+            />
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
 
-    <!-- Más slides aquí -->
+  <!-- Imagen 10 (actual) -->
+  <div class="carousel-item">
+    <div class="image-item central" onclick="changeImage('laBarcaDeOro')">
+      <img
+        src="/statues/laBarcaDeOro.jpg"
+        alt="laBarcaDeOro"
+        class="carousel-image"
+        id="laBarcaDeOro"
+      />
+
+      <!-- Información en columnas -->
+      <div class="description">
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Autor:</strong> Jose Kuri Breña
+          </div>
+          <div class="info-item">
+            <strong>Material:</strong> Bronce
+          </div>
+          <div class="info-item">
+            <strong>año:</strong> 2007
+          </div>
+        </div>
+
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Descripcion:</strong>
+            La de la vela de una embarcación, sostenida en una figura rocosa, simboliza
+            escultura elaborada en bronce, con el procedimiento de cera perdida (en
+            la Fundación de Rodolfo Fierro, en la Ciudad de Guadalajara, Jalisco),
+            alcanza una altura de 2.40 metros y 1 metro en la parte más ancha. La
+            composición el gesto de la despedida, inspirado en la tradición melodía
+            mexicana “LA BARCA DE ORO”. La obra se complementa con un basamento de
+            concreto en tres niveles que van desde 90 centímetros hasta 1.55 metros
+            de alto y 2.20 metros en el lado más ancho de la base. En la parte frontal
+            de la plataforma, que mira hacia lado de la bahía, se colocó una placa
+            con el nombre de la escultura, precisando que se dedica a la ciudad de
+            la paz, donada por la Fundación Eréndira Leyva Borja, con el nombre del
+            autor y la fecha de entrega. El conjunto escultórico se allá en buenas
+            condiciones, no obstante que el servicio eléctrico de iluminación se
+            encuentra averiado.
+          </div>
+        </div>
+
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Historia:</strong>
+            De acuerdo con el autor, la obra se realizó por petición de la fundació0n
+            Hendirá Leyva Borja, para honrar la memoria de quien lleva el nombre
+            de la asociación. Hija de Xicoténcatl Leyva montera. Exgobernador del
+            estado de baja california en el periodo 1983-1989, fue maestra de la
+            escuela y adquirió una casa en la ciudad de la paz, precisamente en la
+            esquina frente en la esquina frente al lugar donde se localiza la escultura.
+            El propio escultor narra que la escultura fue motivada por el interés
+            de la familia Leyva Borja de manifestar un adiós a su hija, tomando como
+            inspiración la letra de la canción creada por el cantautor mexicano cuco
+            Sánchez en 1947. El proceso de elaboración de la escultura conto en todo
+            momento con la atención de los solicitantes hasta su conclusión. El imaginario
+            sudcaliforniano ha dado también a la obra el nombre de “Dorito Nacho”,
+            en alusión a la figura de un conocido producto de una marca mexicana
+            de botanas.
+          </div>
+        </div>
+
+        <!-- Icono de audio -->
+        <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
+          <img
+            src="/statues/bocina.png"
+            alt="Reproducir Audio"
+            class="audio-icon-img"
+          />
+        </button>
+
+        <!-- Contenedor de audio -->
+        <div
+          class="audio-container"
+          id="audioContainer1"
+          style="display: none;"
+        >
+          <audio id="audioPlayer1" controls>
+            <source
+              id="audioSource"
+              src="/audio/La_Ballena_Jorobada.mp3"
+              type="audio/mp3"
+            />
+            <source
+              id="audioSourceOgg"
+              src="/audio/La_Ballena_Jorobada.ogg"
+              type="audio/ogg"
+            />
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Flechas para cambiar de imagen -->
-  <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-  <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  <!-- Imagen 11 (actual) -->
+  <div class="carousel-item">
+    <div class="image-item central" onclick="changeImage('reynaDeLosMares')">
+      <img
+        src="/statues/reynaDeLosMares.jpg"
+        alt="Estatua de la Perla"
+        class="carousel-image"
+        id="reynaDeLosMares"
+      />
+
+      <!-- Información en columnas -->
+      <div class="description">
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Autor:</strong> Rocio Sanchez
+          </div>
+          <div class="info-item">
+            <strong>Material:</strong> Bronce
+          </div>
+          <div class="info-item">
+            <strong>año:</strong> 2002
+          </div>
+        </div>
+
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Descripción:</strong>
+            La escultura, elaborada en bronce, con la técnica de cera perdida, tiene 2.5 metros de altura y un peso de 550 kilogramos. Se localiza en la plazoleta del malecón costero frente al callejón La Paz; tiene vista hacia el nor-poniente, es decir, la bahía de La Paz. Representa el rostro de una mujer en actitud de contemplación, envuelta en un amplio manto que se forma por el corte de un caracol marino, del que se aprecian los pies juntos y descalzos, en posición de emerger del mar. En la frente de la mujer se halla incrustada una gema cortada en forma de diamante que, frente al sol, refleja una sombra que significa la luz de la sabiduría interna.
+            La obra se encuentra sobre dos curvas de metal que representan las olas del mar, las que se apoyan en una pequeña base, también metálica, sobre un pedestal bajo de concreto. En la parte superior del basamento, al pie de la escultura, se aprecia una placa con el nombre de la figura y la autora. A 5 metros de distancia, se colocó un pedestal que representa dos colas de ballenas sumergidas; y, sobre éstas, una placa con el poema "Reina del mar", de Mónica Gutiérrez.
+            El conjunto escultórico se ha mantenido en buenas condiciones desde su inauguración, con excepción del sistema de iluminación, que no funciona desde hace algunos años.
+            
+          </div>
+        </div>
+
+        <div class="info-column">
+          <div class="info-item">
+            <strong>Historia:</strong>
+            La escultura fue donada por la International Community Foundation (ICF) en 2002 al Ayuntamiento de La Paz, con el propósito de promover la paz mundial. La ICF es una organización con sede en National City, California, Estados Unidos de América, desde 1990, que tiene el propósito de promover el medio ambiente y su conservación, los servicios de salud, educación, comunidad y desarrollo económico, así como el arte y la cultura.
+            Actualmente, tiene presencia en diversos países de Latinoamérica, como México, Guatemala, Costa Rica, Panamá, Ecuador, Brasil y Argentina, entre otros.
+            En nuestro país, la fundación actúa en quince estados, entre ellos Baja California Sur, donde ha participado en la conservación de la laguna de San Ignacio, el establecimiento del Centro para el Medio Ambiente, en Loreto, y en el proyecto "Ciudades emergentes y sostenibles en La Paz", con apoyo del Banco Interamericano de Desarrollo, entre otros.
+            La escultura fue adquirida por la ICF para instalarla en La Paz y simbolizar con ella "la importancia de la mayordomía ecológica de todos los que viven en las orillas del Golfo de California", como expresaría Richard Kiy, entonces presidente de la organización, durante el acto de entrega al gobierno municipal.
+            El espacio escultórico ha sido utilizado por organizaciones civiles para conmemorar en diferentes años el solsticio de verano
+            
+          </div>
+        </div>
+
+        <!-- Icono de audio -->
+        <button class="audio-icon" onclick="toggleAudio('audioContainer1')">
+          <img
+            src="/statues/bocina.png"
+            alt="Reproducir Audio"
+            class="audio-icon-img"
+          />
+        </button>
+
+        <!-- Contenedor de audio -->
+        <div
+          class="audio-container"
+          id="audioContainer1"
+          style="display: none;"
+        >
+          <audio id="audioPlayer1" controls>
+            <source
+              id="audioSource"
+              src="/audio/La_Ballena_Jorobada.mp3"
+              type="audio/mp3"
+            />
+            <source
+              id="audioSourceOgg"
+              src="/audio/La_Ballena_Jorobada.ogg"
+              type="audio/ogg"
+            />
+            Tu navegador no soporta el elemento de audio.
+          </audio>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Más slides aquí -->
 </div>
+
+<!-- Flechas para cambiar de imagen -->
+<button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+<button class="next" onclick="moveSlide(1)">&#10095;</button>
 
 <script>
   let slideIndex = 0;
@@ -333,36 +970,36 @@ import '../styles/historical.css';
 
   function showSlides() {
     for (let i = 0; i < slides.length; i++) {
-      (slides[i] as HTMLElement).style.opacity = "0";  // Ocultamos todos los slides
+      (slides[i] as HTMLElement).style.opacity = "0"; // Ocultamos todos los slides
     }
 
-    (slides[slideIndex] as HTMLElement).style.opacity = "1";  // Mostramos el slide actual
+    (slides[slideIndex] as HTMLElement).style.opacity = "1"; // Mostramos el slide actual
   }
 
   function moveSlide(step: number) {
-    slideIndex += step; 
-    if (slideIndex >= slides.length) slideIndex = 0; 
-    if (slideIndex < 0) slideIndex = slides.length - 1; 
+    slideIndex += step;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
 
     showSlides();
   }
 
   function changeImage(id: string) {
-    const images = document.querySelectorAll('.carousel-image');
-    images.forEach(img => {
-      (img as HTMLElement).style.transform = 'scale(1)';  // Reestablecer el tamaño
+    const images = document.querySelectorAll(".carousel-image");
+    images.forEach((img) => {
+      (img as HTMLElement).style.transform = "scale(1)"; // Reestablecer el tamaño
     });
     const activeImage = document.getElementById(id);
     if (activeImage) {
-      activeImage.style.transform = 'scale(1.3)';  // Aumentar el tamaño de la imagen seleccionada
+      activeImage.style.transform = "scale(1.3)"; // Aumentar el tamaño de la imagen seleccionada
     }
   }
 
   setInterval(() => {
-    moveSlide(1);  // Cambiar automáticamente a la siguiente imagen cada 5 segundos
-  }, 18000);
+    moveSlide(1); // Cambiar automáticamente a la siguiente imagen cada 5 segundos
+  }, 2000);
 
-  showSlides();  // Mostrar la primera imagen cuando la página carga
+  showSlides(); // Mostrar la primera imagen cuando la página carga
 
   // Función para mostrar u ocultar el reproductor de audio
   function toggleAudio(containerId: string) {
