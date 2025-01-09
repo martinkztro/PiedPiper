@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@tailwind components;
+
+@layer components {
+  .gallery-container {
+    @apply columns-1 sm:columns-2 md:columns-3 lg:columns-4 space-y-3 p-3;
+  }
+}
